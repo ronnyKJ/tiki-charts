@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head><title>Charts</title>
+</head>
+<script src="lib/base.js"></script>
+<script src="lib/bl_base.js"></script>
+<script src="lib/line.js"></script>
+<script src="lib/bar.js"></script>
+<script src="lib/pie.js"></script>
+<body>
+<!-- <button id='btn' style="width:300px; height:80px">刷新</button> -->
+<div id="pie" style="height:250px;"></div>
+<div id="charts" style="height:200px;"></div><br><br><br>------------------<br><br><br>
+<div id="charts1" style="height:100px;"></div>
+
+<button id="btn">move</button>
+
+<script>
+var charts = document.getElementById('charts');
+var charts1 = document.getElementById('charts1');
+var btn = document.getElementById('btn');
+var data = {
+    guide : true,
+    container : charts,//指定容器
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar']
+    },
+    series: [
+        {
+            name: 'Tokyo',
+            color : 'rgb(183, 211, 240)',
+            data: [20,10,10]
+        }
+    ],
+    onhover : { // 该属性可为空
+        callback : function(x, yArr){ // touchmove时回调，必选
+            
+        }
+    }
+};
+
+var data1 = {
+    guide : true,
+    container : charts1,
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr']
+    },
+    series: [
+        {   
+            name: 'Tokyo',
+            data: [10,10,10,10]
+        },
+        {   
+            name: 'Tokyo',
+            data: [20,20,20,20]
+        },
+        {   
+            name: 'Tokyo',
+            data: [30,30,30,30]
+        }     
+    ],
+    onhover : { // 该属性可为空
+        callback : function(x, yArr){ // touchmove时回调，必选
+            
+        },
+        start : 2
+    }
+};
+
+var c = new Charts.Line(data);//调用方式
+var b = new Charts.Bar(data1);
+
+window.onresize = function(){
+    c.refresh(); //用当前数据重新渲染
+    console.log(charts.clientWidth);
+}
+
+btn.onclick = function(){
+    c.moveIndicator({ //移动指示线，参数两者选其一，若都指定，以moveTo优先
+        moveTo : 1, 
+        moveBy : -1
+    });
+}
+
+var pie = document.getElementById('pie');
+var pieData = {
+    container : pie,
+    pie : {
+        innerRadius : 30,
+        radius : 75,
+        outerRadius : 90
+    },
+    legend : {
+        unit : '元'
+    },
+    series: [
+        {
+            name: 'Tokyo',
+            data: 200,
+            subset : [
+                {name : 'Tokyo-1', data : 60},
+                {name : 'Tokyo-2', data : 30}
+            ]
+        },
+        {
+            name: 'Beijing',
+            data: 300,
+            subset : [
+                {name : 'Tokyo-1', data : 20},
+                {name : 'Tokyo-2', data : 30}
+            ]
+        },
+        {
+            name: 'New York',
+            data: 100,
+            subset : [
+                {name : 'Tokyo-1', data : 20},
+                {name : 'Tokyo-2', data : 30}
+            ]
+        },
+        {
+            name: 'Taiwan',
+            data: 150,
+            subset : [
+                {name : 'Tokyo-1', data : 20},
+                {name : 'Tokyo-2', data : 30}
+            ]
+        },
+        {
+            name: 'HK',
+            data: 250,
+            subset : [
+                {name : 'Tokyo-1', data : 20},
+                {name : 'Tokyo-2', data : 30}
+            ]
+        }
+    ],
+    onhover : { // 该属性可为空
+        callback : function(data){ // touchmove时回调，必选
+            
+        }
+    }
+};
+
+// new Charts.Pie(pieData);
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<title>Tiki Charts</title>
+    <link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="swiper-pages swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+                        <h1 class="cover">Tiki</h1>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+                        <div class="frame">
+                            <h1 class="title">Tiki</h1>
+                            <h2>Bar Chart</h1>
+                            <p>柱状图，是一种以长方形的长度为变量的统计图表。长条图用来比较两个或以上的价值（不同时间或者不同条件），只有一个变量，通常利用于较小的数据集分析。长条图亦可横向排列，或用多维方式表达。</p>
+                            <div id="barShow" class="data-show"></div>
+                            <div id="barContainer" class="chart">
+
+                            </div>
+                            <a href="javascript:;" target="_blank" class="button">Case</a>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+                        <div class="frame">
+                            <h1 class="title">Tiki</h1>
+                            <h2>Line Chart</h1>
+                            <p>折线图可以显示随时间（根据常用比例设置）而变化的连续数据，因此非常适用于显示在相等时间间隔下数据的趋势。在折线图中，类别数据沿水平轴均匀分布，所有值数据沿垂直轴均匀分布。</p>
+                            <div id="lineShow" class="data-show"></div>
+                            <div id="lineContainer" class="chart">
+
+                            </div>
+                            <a href="javascript:;" target="_blank" class="button">Case</a>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+                        <div class="frame">
+                            <h1 class="title">Tiki</h1>
+                            <h2>Pie Chart</h1>
+                            <p>饼图，或称饼状图，是一个划分为几个扇形的圆形统计图表，用于描述量、频率或百分比之间的相对关系。在饼图中，每个扇区的弧长（以及圆心角和面积）大小为其所表示的数量的比例。</p>
+                            <div id="pieContainer" class="chart">
+                                
+                            </div>
+                            <a href="javascript:;" target="_blank" class="button" style="margin-top:130px;">Case</a>
+                        </div>
+					</div>
+				</div>
+			</div>
+            <div class="swiper-slide">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="frame about">
+                            <img alt="" src="img/qrcode.png" width="200" height="200" />
+                            <div class="author">zhangkejing02@baidu.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+	<script src="js/idangerous.swiper-2.0.min.js"></script>
+	<script src="js/idangerous.swiper.scrollbar-2.0.js"></script>
+	<script src="js/index.js"></script>
+
+    <script src="charts/lib/base.js"></script>
+    <script src="charts/lib/bl_base.js"></script>
+    <script src="charts/lib/line.js"></script>
+    <script src="charts/lib/bar.js"></script>
+    <script src="charts/lib/pie.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>

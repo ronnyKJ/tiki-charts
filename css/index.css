@@ -1,0 +1,89 @@
+body,html {position: relative;height: 100%;}
+body{font-family: 'Rosarivo', serif;}
+
+
+.swiper-container, .swiper-wrapper{
+	height: 100%;
+	overflow: auto;
+}
+
+.frame{
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 60px;
+}
+
+h1{
+    color: #00aeff;
+    font-size: 40px;
+}
+
+h1.cover{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%;
+}
+
+h1.title{
+    margin: 12px 0 18px;
+    border-bottom: #555 1px dashed;
+}
+
+
+
+h2{
+    color: #555;
+    font-size: 20px;
+    margin: 14px 0 8px;
+}
+
+p{
+    font-size: 12px;
+    color: #555;
+    line-height: 24px;
+}
+
+.data-show{
+	font-family: Arial;
+	font-size: 10px;
+	padding-left: 10px;
+	color: #FF9898;
+}
+
+.chart{
+    height: 160px;
+    margin: 30px 0;
+}
+
+.button{
+    background: #00aeff;
+    border-radius: 6px;
+    width: 60px;
+    height: 20px;
+    font-size: 26px;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 30px;
+    display: block;
+    margin: 90px auto 0;
+    line-height: 24px;
+}
+
+a.button:active{
+    background-color: #008bcb;
+}
+
+.about{
+	text-align: center;
+}
+
+.about img{
+	margin-top: 40px;
+}
+
+.about .author{
+	margin-top: 20px;
+}

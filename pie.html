@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<title>Tiki Charts</title>
+    <link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="pieContainer" class="chart"></div>
+
+    <script src="charts/lib/base.js"></script>
+    <script src="charts/lib/pie.js"></script>
+    <script>
+        var pieData = {
+            container : pieContainer,
+            pie : {
+                innerRadius : 35,
+                radius : 75
+            },
+            legend : {
+                enabled : false
+            },
+            series: [
+                {
+                    name: 'Tokyo',
+                    color : 'red',
+                    data: 200
+                },
+                {
+                    name: 'Beijing',
+                    color : 'green',
+                    data: 300
+                },
+                {
+                    name: 'New York',
+                    data: 100
+                },
+                {
+                    name: 'Taiwan',
+                    data: 150
+                },
+                {
+                    name: 'HK',
+                    data: 250
+                }
+            ]
+        };
+
+        new Charts.Pie(pieData);
+    </script>
+</body>
+</html>
